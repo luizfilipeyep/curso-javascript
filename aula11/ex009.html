@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    Digite seu país(em minúsculo): <input type="text" name="country" id="country">
+    <input type="button" value="Verificar" id="btn">
+    <div id="res"></div>
+    <script>
+        var country = document.querySelector('#country')
+        var btn = document.querySelector('#btn')
+        var res = document.querySelector('#res')
+
+        btn.addEventListener('click', pesquisar)
+        function pesquisar() {
+            if (country.value == 'brasil') {
+                res.innerHTML = 'Você é Brasileiro!'
+            } else {
+                res.innerHTML = 'Você é Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
